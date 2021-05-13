@@ -30,12 +30,18 @@ int main() {
             try {
                 integer = std::stoi(numberAsString);
                 if (integer > 0) {
-                    do {
-                        loopCounter = loopCounter + 1;
-                        factorial = loopCounter * factorial;
-                    } while (loopCounter < integer);
-                    std::cout << "\n" << integer << " factorial is "
-                          << factorial << std::endl;
+                    if (number == integer) {
+                        do {
+                            loopCounter = loopCounter + 1;
+                            factorial = loopCounter * factorial;
+                        } while (loopCounter < integer);
+                        std::cout << "\n" << integer << " factorial is "
+                            << factorial << std::endl;
+                    } else {
+                        std::cout << "\nInvalid. Enter a positive integer"
+                              " or zero" << std::endl;
+                    }
+
                 } else {
                     std::cout << "\nInvalid. Enter a positive integer or zero"
                           << std::endl;
